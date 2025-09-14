@@ -1,8 +1,20 @@
-# 🗺️ Geospatial Dashboard
+# 🗺️ Geospatial Dashboard for Civilytix
 
-A modern, interactive geospatial dashboard built with React, Leaflet, and Google Maps API. This application provides real-time mapping capabilities with route planning, waypoint management, and seamless user authentication.
+A modern, interactive geospatial dashboard built with React, Leaflet, and Google Maps API, specifically designed to showcase **Civilytix API services**. This application provides real-time mapping capabilities with route planning, waypoint management, and seamless user authentication, serving as a demonstration platform for Civilytix's geospatial and infrastructure analysis capabilities.
 
-![Geospatial Dashboard](https://img.shields.io/badge/Status-Active-green) ![React](https://img.shields.io/badge/React-18+-blue) ![Vite](https://img.shields.io/badge/Vite-Latest-purple) ![Tailwind](https://img.shields.io/badge/TailwindCSS-3.0+-cyan)
+![Geospatial Dashboard](https://img.shields.io/badge/Status-Active-green) ![React](https://img.shields.io/badge/React-18+-blue) ![Vite](https://img.shields.io/badge/Vite-Latest-purple) ![Tailwind](https://img.shields.io/badge/TailwindCSS-3.0+-cyan) ![Civilytix](https://img.shields.io/badge/Built%20for-Civilytix-orange)
+
+## 🏗️ About Civilytix
+
+This project is developed as a demonstration platform for **Civilytix API services** - a comprehensive suite of geospatial and infrastructure analysis tools. Civilytix provides advanced APIs for:
+
+- 🏗️ **Infrastructure Analysis** - Smart city planning and infrastructure assessment
+- 🌍 **Geospatial Intelligence** - Advanced location-based analytics and insights
+- 📊 **Urban Analytics** - City-wide data analysis and visualization
+- 🚧 **Construction Planning** - Site analysis and project management tools
+- 🗺️ **Mapping Services** - Custom mapping solutions for enterprise clients
+
+This dashboard serves as a reference implementation showcasing how Civilytix APIs can be integrated into modern web applications to deliver powerful geospatial experiences.
 
 ## ✨ Features
 
@@ -208,6 +220,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
+- **[Civilytix](https://civilytix.com/)** - For inspiring this geospatial dashboard and providing the vision for advanced infrastructure analysis APIs
 - [OpenStreetMap](https://www.openstreetmap.org/) for map tiles
 - [Leaflet](https://leafletjs.com/) for the mapping library
 - [Shadcn/ui](https://ui.shadcn.com/) for beautiful UI components
