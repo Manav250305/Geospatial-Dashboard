@@ -1,33 +1,41 @@
 // src/components/Sidebar.jsx
-import React from 'react';
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
-const Sidebar = ({ 
-  user, 
-  selectedAPI, 
-  onAPIChange, 
-  requestType, 
-  onRequestTypeChange, 
-  radius, 
-  onRadiusChange, 
-  bufferWidth, 
-  onBufferWidthChange, 
-  onGetData, 
-  loading 
+const Sidebar = ({
+  user,
+  selectedAPI,
+  onAPIChange,
+  requestType,
+  onRequestTypeChange,
+  radius,
+  onRadiusChange,
+  bufferWidth,
+  onBufferWidthChange,
+  onGetData,
+  loading,
 }) => {
   return (
-    <div className="w-80 bg-background border-r p-4 h-full overflow-y-auto">
-      <Card>
+    <div className="w-80 bg-background border-r border-border p-4 h-full overflow-y-auto">
+      <Card className="shadow-sm">
         <CardHeader>
-          <CardTitle>Control Panel</CardTitle>
+          <CardTitle className="text-foreground">Control Panel</CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
           {!user ? (
-            <p className="text-muted-foreground">Please login to access controls</p>
+            <p className="text-muted-foreground">
+              Please login to access controls
+            </p>
           ) : (
             <>
               <div className="space-y-2">
@@ -51,11 +59,14 @@ const Sidebar = ({
                       id="region-radio"
                       type="radio"
                       value="region"
-                      checked={requestType === 'region'}
+                      checked={requestType === "region"}
                       onChange={(e) => onRequestTypeChange(e.target.value)}
                       className="h-4 w-4 border-border"
                     />
-                    <Label htmlFor="region-radio" className="text-sm font-normal cursor-pointer">
+                    <Label
+                      htmlFor="region-radio"
+                      className="text-sm font-normal cursor-pointer"
+                    >
                       By Region
                     </Label>
                   </div>
@@ -64,18 +75,21 @@ const Sidebar = ({
                       id="path-radio"
                       type="radio"
                       value="path"
-                      checked={requestType === 'path'}
+                      checked={requestType === "path"}
                       onChange={(e) => onRequestTypeChange(e.target.value)}
                       className="h-4 w-4 border-border"
                     />
-                    <Label htmlFor="path-radio" className="text-sm font-normal cursor-pointer">
+                    <Label
+                      htmlFor="path-radio"
+                      className="text-sm font-normal cursor-pointer"
+                    >
                       By Path
                     </Label>
                   </div>
                 </div>
               </div>
 
-              {requestType === 'region' && (
+              {requestType === "region" && (
                 <div className="space-y-2">
                   <Label htmlFor="radius-slider">Radius (km): {radius}</Label>
                   <input
@@ -90,14 +104,16 @@ const Sidebar = ({
                 </div>
               )}
 
-              {requestType === 'path' && (
+              {requestType === "path" && (
                 <div className="space-y-2">
                   <Label htmlFor="buffer-width">Buffer Width (meters)</Label>
                   <Input
                     id="buffer-width"
                     type="number"
                     value={bufferWidth}
-                    onChange={(e) => onBufferWidthChange(Number(e.target.value))}
+                    onChange={(e) =>
+                      onBufferWidthChange(Number(e.target.value))
+                    }
                     min="50"
                     max="1000"
                     step="50"
@@ -111,7 +127,7 @@ const Sidebar = ({
                 className="w-full"
                 size="lg"
               >
-                {loading ? 'Processing...' : 'Get Data'}
+                {loading ? "Processing..." : "Get Data"}
               </Button>
 
               <Card className="bg-muted/50">

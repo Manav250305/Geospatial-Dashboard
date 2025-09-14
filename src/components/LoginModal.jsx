@@ -1,28 +1,28 @@
 // src/components/LoginModal.jsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const LoginModal = ({ isOpen, onClose, onLogin }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
     // Simulate login
     onLogin({
-      name: username || 'John Doe',
-      paymentStatus: 'unpaid',
-      token: 'dummy_jwt_token'
+      name: username || "John Doe",
+      paymentStatus: "unpaid",
+      token: "dummy_jwt_token",
     });
     onClose();
-    setUsername('');
-    setPassword('');
+    setUsername("");
+    setPassword("");
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       handleSubmit();
     }
   };
@@ -60,17 +60,10 @@ const LoginModal = ({ isOpen, onClose, onLogin }) => {
               />
             </div>
             <div className="flex justify-end gap-2 pt-4">
-              <Button 
-                variant="outline"
-                onClick={onClose}
-              >
+              <Button variant="outline" onClick={onClose}>
                 Cancel
               </Button>
-              <Button 
-                onClick={handleSubmit}
-              >
-                Login
-              </Button>
+              <Button onClick={handleSubmit}>Login</Button>
             </div>
           </div>
         </CardContent>

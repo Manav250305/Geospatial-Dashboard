@@ -29,9 +29,7 @@ const PaymentModal = ({ isOpen, onClose, onPayment }) => {
             <p className="text-muted-foreground">
               Unlock unlimited data requests and downloads
             </p>
-            <div className="text-2xl font-bold text-green-600">
-              $50.00 USD
-            </div>
+            <div className="text-2xl font-bold text-green-600">$50.00 USD</div>
 
             <div className="bg-muted p-3 rounded-md">
               <h3 className="font-semibold text-sm mb-2">Premium Features:</h3>
@@ -45,21 +43,21 @@ const PaymentModal = ({ isOpen, onClose, onPayment }) => {
             </div>
 
             <div className="p-3 border rounded-md bg-blue-50">
-              <p className="text-sm text-muted-foreground mb-1">Demo Payment Card</p>
+              <p className="text-sm text-muted-foreground mb-1">
+                Demo Payment Card
+              </p>
               <p className="text-xs font-mono">**** **** **** 4242</p>
-              <p className="text-xs text-muted-foreground">Exp: 12/25 | CVV: 123</p>
+              <p className="text-xs text-muted-foreground">
+                Exp: 12/25 | CVV: 123
+              </p>
             </div>
 
             <div className="flex justify-end gap-2 pt-4">
-              <Button 
-                variant="outline" 
-                onClick={onClose} 
-                disabled={processing}
-              >
+              <Button variant="outline" onClick={onClose} disabled={processing}>
                 Cancel
               </Button>
-              <Button 
-                onClick={handlePayment} 
+              <Button
+                onClick={handlePayment}
                 disabled={processing}
                 className="min-w-[100px]"
               >
