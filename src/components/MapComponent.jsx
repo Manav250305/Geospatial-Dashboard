@@ -7,11 +7,11 @@ import {
   Marker,
   Popup,
   Circle,
-  Polyline,
   GeoJSON,
 } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import RouteComponent from "./RouteComponent";
 
 // Import the leaflet fix
 import "../utils/leafletFix.js";
@@ -219,29 +219,8 @@ const MapComponent = ({
           </>
         )}
 
-        {/* Show path selection */}
-        {pathPoints.map((point, index) => (
-          <Marker key={index} position={point}>
-            <Popup>
-              <div>
-                <strong>Path Point {index + 1}</strong>
-                <br />
-                Lat: {point.lat.toFixed(4)}
-                <br />
-                Lng: {point.lng.toFixed(4)}
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-
-        {pathPoints.length === 2 && (
-          <Polyline
-            positions={pathPoints}
-            color="red"
-            weight={3}
-            opacity={0.7}
-          />
-        )}
+        {/* Show path selection and route */}
+        {pathPoints.length > 0 && <RouteComponent pathPoints={pathPoints} />}
 
         {/* Show data visualization */}
         {mapData && mapData.type === "geojson" && (
